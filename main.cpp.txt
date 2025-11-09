@@ -1,0 +1,53 @@
+#include "geometry/point.h"
+#include "geometry/vector.h"
+#include "geometry/utils.h"
+
+int main(){
+    
+    print("***GEOMETRIE DE L'ESPACE***");
+    point2f pA = Makep2f(1.f, 2.f);
+    print("les coordonnees du pointA":, Tostring(pA));
+    point2f pB = Make2f(3.f , 4.f);
+    print("les coordonnes du point B":, Tostring(pB));
+
+    vector2f v = Makev2f(0.f , 1.f);
+    print("les coordonnes du vecteur v":,Tostring(v));
+    vector2f w = Make2f(-1.f , 1.f);
+    print("les coordonnees du vecteur w", Tostring(v));
+
+    point2f T = Translate(pA,V);
+    print("LA TRANSLATION DU POINT A PAR RAPPORT AU VECTEUR V EST:", Tostring(T));
+int k = 2
+    point2f H = homo(pA,k);
+    print("L'HOMOTHETIE DU POINT A PAR RAPPORT A K EST:",ToString(H));
+
+   float ∆=180
+
+    point2f R = Rot(pA , ∆);
+    Print("NOUVEAU COORDONNEES DE A:", ToString(R));
+
+    Vector2f S = Sous(v, w);
+    Print("LA SOUSTRACTION DE V ET W DONNE:", ToString(s));
+
+    Vector2f AD = Add(v, w);
+    Print("L'ADDITION DE V ET W DONNE:", ToString(AD));
+
+    float Scale = Dot(v, w);
+    Print("LE PRODUIT SCALAIRE DE V ET W DONNE:", ToString(Scale));
+
+    float N = Nor(w);
+    Print("LA NORME DU VESTEUR W DONNE:", Length(N));
+
+    float det = Determinant(v, w);
+    Print("LE DETERMINANT DE V ET W DONNE:", det(v,w));
+
+    
+     Vector2f Norm = Normalize(v);
+     Print("NORMALISATION DE V DONNE :", ToString(Norm));
+
+    return 0;
+}
+
+
+
+
